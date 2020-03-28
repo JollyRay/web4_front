@@ -1,0 +1,89 @@
+.slider{
+  height: 50px;
+  width: 200px;
+}
+p-slider{
+  width: 200px;
+}
+
+.alert{
+  width: 230px;
+}
+
+*{
+  font-family: Courier New, monospace;
+}
+
+canvas{
+  background-color: rgba(30, 144, 255, 0.53);
+  margin: 10px;
+}
+
+.btn-cntnr
+{
+  margin-left:auto;
+  margin-right:auto;
+  display: table;
+}
+
+
+.btn-cntnr > .btn-primary .ui-button  {
+  border-radius: 10px!important;
+  padding: 5px;
+  outline: none;
+  color: azure;
+  background: rgba(48, 48, 48, 0.65);
+  font-family: Courier New, monospace;
+  font-size: large;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+ .btn-primary .ui-button:hover {
+  background: rgba(48, 48, 48, 0.94);
+  /*border-color: #191919;*/
+}
+
+.btn-primary {
+  color: azure;
+  background: rgba(48, 48, 48, 0.65);
+  border-color: rgba(0, 123, 255, 0);
+}
+
+.request-form {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+@media (min-width: 1105px) {
+  .canvas-form {
+    display: flex;
+  }
+}
+
+.home, .canvas-form, .request-form, .table-view {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-flex;
+}
+
+
+@media (max-width: 1104px) {
+  .canvas-form {
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+  }
+}
+
+@media (max-width: 790px) {
+  .canvas-form {
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+  }
+}
+

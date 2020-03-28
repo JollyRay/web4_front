@@ -1,0 +1,42 @@
+<div class="canvas-form">
+  <div class="request-form">
+    <div class="carrier">
+    <form #form id="formId" class="block {{isDesktopDisplay()?'desktop-form':''}}" name="form-check"
+          (ngSubmit)="addPointsFromForm()" #f="ngForm" novalidate
+          style="pointer-events: all; margin: 10px">
+      <div class="alert" role="alert" *ngIf="errorMessage">{{errorMessage}}</div>
+
+      <h4>X: {{selectedX}}</h4>
+      <div class="slider">
+        <p-slider [(ngModel)]="selectedX" [step]="1" [min]="MIN_X" [max]="MAX_X" name="valX"></p-slider>
+      </div>
+
+      <h4>Y: {{selectedY}}</h4>
+      <div class="slider">
+        <p-slider [(ngModel)]="selectedY" [step]="1" [min]="MIN_Y" [max]="MAX_Y" name="valY"></p-slider>
+      </div>
+
+      <h4>R: {{selectedR}}</h4>
+      <div class="slider">
+        <p-slider #SelectR [(ngModel)]="selectedR" [step]="1" [min]="MIN_R" [max]="MAX_R" name="valR"
+                  (onChange)="drawGraph(SelectR.value)"></p-slider>
+      </div>
+      <br>
+
+      <div #submitBtn>
+        <p-button label="Полетели!" type="submit"></p-button>
+      </div>
+
+    </form>
+    </div>
+  </div>
+  <div></div>
+  <div class="{{isDesktopDisplay()?'':'flex-g-center'}}">
+    <canvas #canvas class="block {{isDesktopDisplay()?'desktop-canvas':''}}" width="400" height="400"
+            (click)="addPointFromCanvas()">
+    </canvas>
+  </div>
+
+</div>
+
+

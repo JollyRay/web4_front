@@ -1,0 +1,28 @@
+<div>
+  <nav id="header" class="navbar navbar-inverse reset-border-radius">
+  <ul class="nav">
+    <li class="to-left {{section!='check-point'?'active':''}}" (click)="changeSection('home')">
+      <a  routerLink="/home" routerLinkActive="active">History</a></li>
+    <li class="to-left {{section=='check-point'?'active':''}}" (click)="changeSection('check-point')">
+      <a routerLink="/check-point" routerLinkActive="active" class="find">Check Point</a></li>
+   <li class="to-right"><a href="#" (click)="logOut()" class ="byeh">LogOut</a></li>
+  </ul>
+</nav>
+  <br><br>
+
+
+
+<div class="container">
+  <div id="more-info" #moreInfo style="visibility: hidden" >
+  </div>
+  <div id="history-page" *ngIf="section == 'home'">
+    <app-history></app-history>
+  </div>
+  <div id="check-point-page" #checkPage *ngIf="section == 'check-point'" style="pointer-events: all">
+    <app-check-point></app-check-point>
+  </div>
+</div>
+
+
+</div>
+
